@@ -1,7 +1,7 @@
 var todoList = {
-	// todos: JSON.parse(localStorage.storedTodos),
+	todos: JSON.parse(localStorage.storedTodos),
 	// todos: [],
-	todos: '',
+
 
 	addTodo: function(todo) {
 		this.todos.push({
@@ -256,11 +256,7 @@ var view = {
 view.setUpEventListeners();
 
 window.onload = function() {
-	if (localStorage.storedTodos) {
-		todoList.todos = JSON.parse(localStorage.storedTodos);
-	} else {
-		todoList.todos = [];
-	}
+
 	view.displayTodos();
 };
 
